@@ -1,0 +1,120 @@
+.main {
+  position: relative;
+}
+
+.word {
+  font-size: 11vmin;
+}
+
+.translate {
+  font-size: 7vmin;
+  line-height: 1.2;
+
+  &:not(:last-child) {
+    margin-bottom: 0.7vmin;
+  }
+}
+
+.translate-list {
+  width: 85%;
+  margin-bottom: 8vmin;
+  border-bottom: 1px solid black;
+  padding-bottom: 12vmin;
+}
+
+.phrase-block {
+  &:not(:last-child) {
+    margin-bottom: 5vmin;
+  }
+}
+
+.buttons-inline {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2vmin;
+}
+
+.button-list {
+  position: absolute;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vmin;
+  border-radius: 50px;
+  margin: 3vmin 5vmin 0;
+  box-shadow: 10px 10px 21px #d3d3d6;
+  background-color: $color-purple;
+  color: $mainColor;
+  font-size: 3.5vmin;
+
+  @media (max-width: $xl) {
+    position: static;
+  }
+
+  @media (max-height: $lg) and (orientation: landscape) {
+    position: absolute;
+  }
+}
+
+.button-reverso {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vmin;
+  border-radius: 50px;
+  margin: 3vmin 5vmin 0;
+  box-shadow: 10px 10px 21px #d3d3d6;
+  background-color: $color-purple;
+  color: $mainColor;
+  font-size: 3.5vmin;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vmin;
+  line-height: 24px;
+  padding: 2vmin 4vmin;
+  min-height: 2vmin;
+  width: 30vmin;
+  border-radius: 24px;
+  transition: all 0.4s ease 0s;
+  background-color: $color-purple;
+  color: $mainColor;
+  outline: none;
+  box-shadow: 10px 10px 21px #d3d3d6;
+
+  @media (max-width: $xsm) {
+    font-size: 5vmin;
+    line-height: 1.3;
+    padding: 2vmin;
+  }
+}
+
+#button-comback {
+  transform: rotate(180deg);
+}
+
+.arrow {
+  font-size: 7vmin;
+}
+
+.phrase {
+  font-size: 5vmin;
+  line-height: 1.2;
+}
+
+.main,
+.word,
+.translate,
+.phrase {
+  @include appear;
+}

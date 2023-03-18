@@ -1,0 +1,53 @@
+.container {
+  width: 90vmin;
+  height: 80vmin;
+  position: relative;
+  margin: 3vmin auto;
+  text-align: center;
+  color: $color-white;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 10px 10px 21px #d3d3d6;
+
+  @media (max-width: $xl) {
+    height: 70vmin;
+  }
+
+  @media (max-width: $lg) {
+    height: 90vmin;
+  }
+
+  @media (max-height: $lg) and (orientation: landscape) {
+    height: 80vmin;
+  }
+
+  @media (max-width: $xsm) {
+    height: 125vmin;
+  }
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $color-purple;
+}
+
+.back {
+  position: absolute;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  background: $color-yellow;
+  color: $color-black;
+  padding: 3vmin;
+}
+
+.front,
+.back {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
